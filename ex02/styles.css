@@ -1,0 +1,82 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+section {
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 1.5em;
+  margin-top: 0;
+}
+
+h3 {
+  color: #d13e7d;
+}
+
+button {
+  background-color: #e84390;
+  border: none;
+  color: #fff;
+  padding: 10px 15px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #d13e7d;
+}
+
+button:disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="file"],
+select {
+  display: block;
+  width: 98%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.checkbox-group div {
+  margin-bottom: 10px;
+}
+
+.oculto {
+  display: none;
+}
+
+.buttons {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.buttons button {
+  margin: 0 10px;
+}
+

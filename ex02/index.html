@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <div class="container">
+    <h3>EXERCÍCIO DOM 02 - PROGAMAÇÃO PARA INTERNET I</h3>
+    <section>
+      <h1>Exibir Mensagem de Erro</h1>
+      <button id="botaoErro">Mostrar Erro</button>
+      <div id="erro1" class="oculto"></div>
+    </section>
+
+    <section>
+      <h1>Exibir Conteúdo do Texto</h1>
+      <label for="caixaDeTexto">Digite o texto:</label>
+      <input type="text" id="caixaDeTexto" />
+      <button id="botaoExibir">Exibir</button>
+      <div id="conteudo"></div>
+      <div id="erro2"></div>
+    </section>
+
+    <section>
+      <h1>Calcular Engajamento</h1>
+      <label for="interacoes">Número de interações:</label>
+      <input type="number" id="interacoes" />
+      <label for="visualizacoes">Número de visualizações:</label>
+      <input id="visualizacoes" type="number" />
+      <button id="botaoCalcular">Calcular engajamento</button>
+      <div id="erro3"></div>
+      <div id="resultEngajamento"></div>
+    </section>
+
+    <section>
+      <h1>Upload e Exibição de Imagem</h1>
+      <label for="imagem">Upload de arquivo:</label>
+      <input type="file" id="imagem" />
+      <button id="botaoCarregarImagem">Carregar imagem</button>
+      <div id="resultImage"></div>
+    </section>
+
+    <section>
+      <h1>Selecionar Redes Sociais</h1>
+      <label>Redes Sociais:</label>
+      <div class="checkbox-group">
+        <div><input type="checkbox" id="facebook" name="redesSociais" value="Facebook"><label for="facebook">Facebook</label></div>
+        <div><input type="checkbox" id="twitter" name="redesSociais" value="Twitter"><label for="twitter">Twitter</label></div>
+        <div><input type="checkbox" id="instagram" name="redesSociais" value="Instagram"><label for="instagram">Instagram</label></div>
+        <div><input type="checkbox" id="linkedin" name="redesSociais" value="LinkedIn"><label for="linkedin">LinkedIn</label></div>
+        <div><input type="checkbox" id="tiktok" name="redesSociais" value="TikTok"><label for="tiktok">TikTok</label></div>
+      </div>
+      <div id="redesSelecionadas"></div>
+      <button type="button" id="enviarBtn">Enviar Seleção</button>
+      <div id="erro4" class="oculto"></div>
+    </section>
+
+    <section>
+      <h1>Gerenciar Hashtags</h1>
+      <div>
+        <input type="text" id="inputHashtag" placeholder="Nova hashtag">
+        <button type="button" id="botaoHashtag">Adicionar</button>
+      </div>
+      <div>
+        <select id="selectHashtag" size="5"></select>
+        <button type="button" id="botaoExcluir">Excluir hashtag</button>
+      </div>
+      <div id="erroHashtag"></div>
+    </section>
+
+    <section>
+      <h1>Mover Ativos Financeiros entre Carteiras</h1>
+      <div class="container">
+        <div>
+          <label for="ativosDisponiveis">Ativos Disponíveis:</label>
+          <select id="ativosDisponiveis" size="10" multiple>
+            <option value="AAPL">Apple (AAPL)</option>
+            <option value="GOOGL">Google (GOOGL)</option>
+            <option value="AMZN">Amazon (AMZN)</option>
+            <option value="MSFT">Microsoft (MSFT)</option>
+            <option value="TSLA">Tesla (TSLA)</option>
+            <option value="BRK.B">Berkshire Hathaway (BRK.B)</option>
+            <option value="FB">Meta (FB)</option>
+            <option value="V">Visa (V)</option>
+            <option value="JNJ">Johnson & Johnson (JNJ)</option>
+            <option value="WMT">Walmart (WMT)</option>
+          </select>
+        </div>
+        <div class="buttons">
+          <button id="moverParaDireitaBtn">></button>
+          <button id="moverParaEsquerdaBtn"><</button>
+        </div>
+        <div>
+          <label for="carteiraInvestimentos">Carteira de Investimentos:</label>
+          <select id="carteiraInvestimentos" size="10" multiple></select>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+
+</html>
