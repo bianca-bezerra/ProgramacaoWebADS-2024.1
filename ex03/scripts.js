@@ -85,8 +85,17 @@ function displayDataAsList(data) {
   }
 }
 
-function fetchData() {
-  fetch(`${restApiUrl}/objects`)
+function searchObject(){
+  const query = document.getElementById("objectQuery").value;
+  if (query) {
+    fetchData(query);
+  } else {
+    alert("Por favor, insira um termo de pesquisa.");
+  }
+}
+
+function fetchData(query) {
+  fetch(`${restApiUrl}/objects?id=${query}`)
     .then((response) => response.json())
     .then((data) => {
       displayDataAsList(data);
@@ -98,7 +107,7 @@ function fetchData() {
 }
 
 function postData() {
-  const productName = document.getElementById("productName").value;
+  const productName = document.getElementById("objectName").value;
   const color = document.getElementById("color").value;
   const price = parseFloat(document.getElementById("price").value);
 
