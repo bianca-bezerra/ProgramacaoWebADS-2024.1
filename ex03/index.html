@@ -6,17 +6,25 @@
     <title>Interação com APIs</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="scripts.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <h1>Interação com APIs<br/>Programação para Internet II</h1>
+    <h1>Interação com APIs<br />Programação para Internet II</h1>
 
     <h2>Buscar GIFs do Giphy</h2>
-    <input
-      type="text"
-      id="giphyQuery"
-      placeholder="Digite um termo de pesquisa"
-    />
-    <button onclick="searchGifs()">Buscar GIFs</button>
+    <form>
+      <input
+        type="text"
+        id="giphyQuery"
+        placeholder="Digite um termo de pesquisa"
+      />
+      <button onclick="searchGifs()">Buscar GIFs</button>
+    </form>
 
     <div class="response">
       <h2>Response do GET de Giphy:</h2>
@@ -24,15 +32,6 @@
     </div>
 
     <h2>Receber e Enviar Dados para API RESTful</h2>
-
-    <button type="button" onclick="fetchData()" id="receberDados">
-      Receber Dados
-    </button>
-
-    <div class="response">
-      <h2>Response do GET da API RESTful</h2>
-      <pre id="responseOutputRestGet"></pre>
-    </div>
 
     <form id="postForm">
       <label for="productName">Nome do Objeto</label>
@@ -50,6 +49,17 @@
     <div class="response">
       <h2>Response do POST da API RESTful</h2>
       <pre id="responseOutputRestPost"></pre>
+    </div>
+    <br/>
+    <form>
+      <label>API de objetos</label>
+      <button type="button" onclick="fetchData()" id="receberDados">
+        Receber Dados
+      </button>
+    </form>
+    <div class="response">
+      <h2>Response do GET da API RESTful</h2>
+      <pre id="responseOutputRestGet"></pre>
     </div>
 
     <h2>Receber dados da CATAAS (Cat as Service)</h2>
