@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interação com APIs</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Interaja com APIs</h1>
+
+    <h2>Buscar GIFs do Giphy</h2>
+    <input
+      type="text"
+      id="giphyQuery"
+      placeholder="Digite um termo de pesquisa"
+    />
+    <button onclick="searchGifs()">Buscar GIFs</button>
+
+    <h2>Receber e Enviar Dados para API RESTful</h2>
+
+    <button type="button" onclick="fetchData()" id="receberDados">
+      Receber Dados
+    </button>
+
+    <form id="postForm">
+      <label for="productName">Nome do Produto:</label>
+      <input type="text" id="productName" required />
+      <br />
+      <label for="color">Cor:</label>
+      <input type="text" id="color" required />
+      <br />
+      <label for="price">Preço:</label>
+      <input type="number" id="price" step="0.01" required />
+      <br />
+      <button type="button" onclick="postData()">Enviar Dados</button>
+    </form>
+
+    <div class="response">
+      <h2>Resposta:</h2>
+      <pre id="responseOutput"></pre>
+    </div>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
