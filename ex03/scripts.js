@@ -1,4 +1,4 @@
-const giphyApiKey = "API-KEY";
+const giphyApiKey = "NyxxlIPioUtIJwxN4xD6a4B2J5iwOpiy";
 const restApiUrl = "https://api.restful-api.dev";
 
 function searchGifs() {
@@ -10,6 +10,31 @@ function searchGifs() {
   }
 }
 
+function searchCat() {
+  const query = document.getElementById("catQuery").value;
+  if (query) {
+    fetchCat(query);
+  } else {
+    alert("Por favor, insira um termo de pesquisa.");
+  }
+}
+
+function clean(output_element) {
+  const output = document.getElementById(output_element);
+  output.innerHTML = "";
+}
+
+function fetchCat(query) {
+  const url = `https://cataas.com/cat/says/${query}`;
+  fetch(url).then((data) => {
+    const output = document.getElementById("responseOutputCat");
+    output.innerHTML = "";
+    const img = document.createElement("img");
+    img.src = data.url;
+    output.appendChild(img);
+  });
+}
+
 function fetchGiphyGifs(query) {
   const url = `https://api.giphy.com/v1/gifs/search?api_key=${giphyApiKey}&q=${encodeURIComponent(
     query
@@ -18,7 +43,7 @@ function fetchGiphyGifs(query) {
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
-      const output = document.getElementById("responseOutput");
+      const output = document.getElementById("responseOutputGif");
       output.innerHTML = "";
 
       if (data.data.length === 0) {
@@ -35,12 +60,13 @@ function fetchGiphyGifs(query) {
       });
     })
     .catch((error) => {
-      document.getElementById("responseOutput").textContent = "Erro: " + error;
+      document.getElementById("responseOutputGif").textContent =
+        "Erro: " + error;
     });
 }
 
 function displayDataAsList(data) {
-  const output = document.getElementById("responseOutput");
+  const output = document.getElementById("responseOutputRestGet");
   output.innerHTML = "";
 
   const ul = document.createElement("ul");
@@ -66,7 +92,8 @@ function fetchData() {
       displayDataAsList(data);
     })
     .catch((error) => {
-      document.getElementById("responseOutput").textContent = "Erro: " + error;
+      document.getElementById("responseOutputRestGet").textContent =
+        "Erro: " + error;
     });
 }
 
@@ -92,10 +119,11 @@ function postData() {
   })
     .then((response) => response.json())
     .then((data) => {
-      const output = document.getElementById("responseOutput");
+      const output = document.getElementById("responseOutputRestPost");
       output.textContent = JSON.stringify(data, null, 2);
     })
     .catch((error) => {
-      document.getElementById("responseOutput").textContent = "Erro: " + error;
+      document.getElementById("responseOutputRestPost").textContent =
+        "Erro: " + error;
     });
 }
